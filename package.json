@@ -1,0 +1,41 @@
+{
+  "name": "systeme-design-helper",
+  "displayName": "Systeme Design Helper",
+  "description": "The Visual Architecture Designer for MERN is a powerful VSCode extension that allows developers to intuitively design and visualize their application architecture using a drag-and-drop interface. Whether you're building a MERN stack application or any other architecture, this tool simplifies the process of organizing your components and verifying their connections.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:systeme-design-helper.createMicroservices",
+      "onCommand:systeme-design-helper.openDrawingBoard"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "systeme-design-helper.createMicroservices",
+      "title": "Create Microservices"
+    },
+    {
+      "command": "systeme-design-helper.openDrawingBoard",
+      "title": "Open Drawing Board"
+  }
+  ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.93.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "eslint": "^9.9.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
